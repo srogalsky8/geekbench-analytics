@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1, user-scalable=no' name='viewport'>
+<meta content='yes' name='apple-mobile-web-app-capable'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="mgv8Y8XuHk+r5hgV2BxMFiW7+5xbLhdjBkcQDeNtZwyuLbRxktcT2vJ2ZN176ePPxkUN1zdkD4xhk6rtmb0GXg==" />
+<script src="/assets/application-7f4a869d6133b69b6c8aadb740b966f2a572aace0008865816872e7522300438.js"></script>
+<link rel="stylesheet" media="screen" href="/assets/application-17eeb34a5927e15a91d1df40b285fffc65a594e27ba790d2472547f7bd44bf4d.css" />
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<title>surface - Geekbench Search
+ - Geekbench Browser</title>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-83282280-2', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+<body>
+<div class='navbar navbar-default navbar-fixed-top'>
+<div class='container'>
+<div class='navbar-header'>
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class='navbar-brand' href='/'>Geekbench Browser</a>
+</div>
+<div class='collapse navbar-collapse'>
+<ul class='nav navbar-nav'>
+<li class='dropdown' data-dropdown='dropdown'>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Geekbench 4 <b class="caret"></b></a>
+<ul class='dropdown-menu'>
+<li><a href="/v4/cpu/singlecore">Top Single-Core Results</a></li>
+<li><a href="/v4/cpu/multicore">Top Multi-Core Results</a></li>
+<li><a href="/v4/cpu">Recent Results</a></li>
+<li><a href="/v4/cpu/search">Search Results</a></li>
+<li class='divider'></li>
+<li><a href="/v4/compute">Recent Compute Results</a></li>
+<li><a href="/v4/compute/search">Search Compute Results</a></li>
+</ul>
+</li>
+<li class='dropdown' data-dropdown='dropdown'>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Geekbench 3 <b class="caret"></b></a>
+<ul class='dropdown-menu'>
+<li><a href="/geekbench3/singlecore">Top Single-Core Results</a></li>
+<li><a href="/geekbench3/multicore">Top Multi-Core Results</a></li>
+<li><a href="/geekbench3">Recent Results</a></li>
+<li><a href="/geekbench3/search">Search Results</a></li>
+<li class='divider'></li>
+<li><a href="/battery3/top">Top Battery Results</a></li>
+<li><a href="/battery3/longest">Longest Battery Results</a></li>
+<li><a href="/battery3">Recent Battery Results</a></li>
+<li><a href="/battery3/search">Search Battery Results</a></li>
+</ul>
+</li>
+<li class='dropdown' data-dropdown='dropdown'>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Benchmark Charts <b class="caret"></b></a>
+<ul class='dropdown-menu'>
+<li><a href="/android-benchmarks">Android Benchmark Chart</a></li>
+<li><a href="/ios-benchmarks">iOS Benchmark Chart</a></li>
+<li><a href="/mac-benchmarks">Mac Benchmark Chart</a></li>
+<li><a href="/processor-benchmarks">Processor Benchmark Chart</a></li>
+<li class='divider'></li>
+<li><a href="/cuda-benchmarks">CUDA Benchmark Chart</a></li>
+<li><a href="/opencl-benchmarks">OpenCL Benchmark Chart</a></li>
+<li><a href="/renderscript-benchmarks">RenderScript Benchmark Chart</a></li>
+<li class='divider'></li>
+<li><a href="/battery-benchmarks">Battery Benchmark Chart</a></li>
+</ul>
+</li>
+</ul>
+<form action='/v4/cpu/search' class='navbar-form navbar-left'>
+<div class='form-group col-xs-12'>
+<i class='fa fa-search fa-inverse'></i>
+<input class='search-query' name='q' placeholder='Search Results' type='text'>
+</div>
+</form>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown' data-dropdown='dropdown'>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+<ul class='dropdown-menu'>
+<li><a href="/user/new">Sign Up</a></li>
+<li><a href="/session/new">Log In</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='container' id='wrap'>
+<div class='row'>
+<div class='col-md-12'>
+<div class='row row-centered'>
+<div class='col-xs-12'>
+</div>
+</div>
+<div class='page-header'>
+<h2>
+Geekbench 4 CPU Search
+<small>28,016 results found</small>
+</h2>
+</div>
+<form class="form-inline" action="/v4/cpu/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<div class='form-group'>
+<input class='search-query' name='q' placeholder='e.g., Intel Core i7' type='text' value='surface'>
+</div>
+<button class='btn btn-primary' href='/v4/cpu/search' type='submit'>Search</button>
+</form>
+
+
+<div class='table-responsive'>
+<table class='table geekbench3-index'>
+<thead>
+<tr>
+<th><a href="/v4/cpu/search?dir=desc&amp;q=surface&amp;sort=created_at">Uploaded</a></th>
+<th>Model</th>
+<th>Platform</th>
+<th>User</th>
+<th><a href="/v4/cpu/search?dir=desc&amp;q=surface&amp;sort=score">Single-Core Score</a></th>
+<th><a href="/v4/cpu/search?dir=desc&amp;q=surface&amp;sort=multicore_score">Multi-Core Score</a></th>
+</tr>
+<tbody></tbody>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235864">Microsoft Corporation Surface Go</a>
+<span>
+Intel Pentium 4415Y
+1595 MHz
+(2 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+2006
+</td>
+<td class='score'>
+3965
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235634">Microsoft Corporation Surface Laptop 2</a>
+<span>
+Intel Core i5-8250U
+1795 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+3988
+</td>
+<td class='score'>
+12568
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235542">Microsoft Corporation Surface Book 2</a>
+<span>
+Intel Core i7-8650U
+2095 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+<a href="/user/uoncu">uoncu</a>
+</td>
+<td class='score'>
+4857
+</td>
+<td class='score'>
+13135
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235509">Microsoft Corporation Surface Book 2</a>
+<span>
+Intel Core i7-8650U
+2095 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+4773
+</td>
+<td class='score'>
+12743
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235497">Microsoft Corporation Surface 3</a>
+<span>
+Intel Atom x7-Z8700
+1601 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+941
+</td>
+<td class='score'>
+2357
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235483">Microsoft Corporation Surface Book 2</a>
+<span>
+Intel Core i7-8650U
+2095 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+<a href="/user/uoncu">uoncu</a>
+</td>
+<td class='score'>
+4718
+</td>
+<td class='score'>
+12874
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235461">Microsoft Corporation Surface Laptop 2</a>
+<span>
+Intel Core i5-8250U
+1795 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+3998
+</td>
+<td class='score'>
+12641
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235456">Microsoft Corporation Surface Book 2</a>
+<span>
+Intel Core i7-8650U
+2095 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+<a href="/user/uoncu">uoncu</a>
+</td>
+<td class='score'>
+4730
+</td>
+<td class='score'>
+12725
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235436">Microsoft Corporation Surface Book 2</a>
+<span>
+Intel Core i7-8650U
+2095 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+4036
+</td>
+<td class='score'>
+10112
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235431">Microsoft Corporation Surface Laptop 2</a>
+<span>
+Intel Core i5-8250U
+1795 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+4006
+</td>
+<td class='score'>
+12594
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235426">Microsoft Corporation Surface Book 2</a>
+<span>
+Intel Core i7-8650U
+2095 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+<a href="/user/uoncu">uoncu</a>
+</td>
+<td class='score'>
+4804
+</td>
+<td class='score'>
+12995
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235414">Microsoft Corporation Surface Laptop 2</a>
+<span>
+Intel Core i5-8250U
+1795 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+3874
+</td>
+<td class='score'>
+12416
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235393">Microsoft Corporation Surface Laptop 2</a>
+<span>
+Intel Core i5-8250U
+1795 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+3886
+</td>
+<td class='score'>
+12345
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235381">Microsoft Corporation Surface Book 2</a>
+<span>
+Intel Core i7-8650U
+2094 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+<a href="/user/uoncu">uoncu</a>
+</td>
+<td class='score'>
+4785
+</td>
+<td class='score'>
+12415
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235305">Microsoft Corporation Surface Pro</a>
+<span>
+Intel Core i5-7300U
+2692 MHz
+(2 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+2578
+</td>
+<td class='score'>
+6941
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235236">Microsoft Corporation Surface Pro 6</a>
+<span>
+Intel Core i7-8650U
+2095 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+4364
+</td>
+<td class='score'>
+13135
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235185">Microsoft Corporation Surface Pro 6</a>
+<span>
+Intel Core i7-8650U
+2094 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+4468
+</td>
+<td class='score'>
+13104
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12235123">Microsoft Corporation Surface Pro 6</a>
+<span>
+Intel Core i7-8650U
+2094 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+4423
+</td>
+<td class='score'>
+13092
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12234903">Microsoft Corporation Surface Pro 4</a>
+<span>
+Intel Core i5-6300U
+2495 MHz
+(2 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+2646
+</td>
+<td class='score'>
+5740
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12234628">Microsoft Corporation Surface Pro 4</a>
+<span>
+Intel Core i5-6300U
+2493 MHz
+(2 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+3518
+</td>
+<td class='score'>
+7004
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12234333">Microsoft Corporation Surface Pro 3</a>
+<span>
+Intel Core i7-4650U
+1696 MHz
+(2 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+2273
+</td>
+<td class='score'>
+5171
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12233876">Microsoft Corporation Surface Laptop 2</a>
+<span>
+Intel Core i7-8650U
+2094 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+4313
+</td>
+<td class='score'>
+13573
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12233874">Microsoft Corporation Surface Book 2</a>
+<span>
+Intel Core i7-8650U
+2094 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+4505
+</td>
+<td class='score'>
+13879
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12233712">Microsoft Corporation Surface Pro 2</a>
+<span>
+Intel Core i5-4200U
+1596 MHz
+(2 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+3141
+</td>
+<td class='score'>
+5449
+</td>
+</tr>
+<tr>
+<td class='added'>
+Mar 01, 2019
+</td>
+<td class='model'>
+<a href="/v4/cpu/12233676">Microsoft Corporation Surface Pro 6</a>
+<span>
+Intel Core i5-8250U
+1795 MHz
+(4 cores)
+</span>
+</td>
+<td class='platform'>
+Windows 64-bit
+</td>
+<td class='user'>
+</td>
+<td class='score'>
+4106
+</td>
+<td class='score'>
+13048
+</td>
+</tr>
+</thead>
+</table>
+</div>
+
+<ul class="pagination"><li class="prev previous_page disabled"><a href="#">&#8592; Previous</a></li> <li class="active"><a href="/v4/cpu/search?page=1&amp;q=surface&amp;utf8=%E2%9C%93">1</a></li> <li><a rel="next" href="/v4/cpu/search?page=2&amp;q=surface&amp;utf8=%E2%9C%93">2</a></li> <li><a href="/v4/cpu/search?page=3&amp;q=surface&amp;utf8=%E2%9C%93">3</a></li> <li><a href="/v4/cpu/search?page=4&amp;q=surface&amp;utf8=%E2%9C%93">4</a></li> <li><a href="/v4/cpu/search?page=5&amp;q=surface&amp;utf8=%E2%9C%93">5</a></li> <li><a href="/v4/cpu/search?page=6&amp;q=surface&amp;utf8=%E2%9C%93">6</a></li> <li><a href="/v4/cpu/search?page=7&amp;q=surface&amp;utf8=%E2%9C%93">7</a></li> <li><a href="/v4/cpu/search?page=8&amp;q=surface&amp;utf8=%E2%9C%93">8</a></li> <li><a href="/v4/cpu/search?page=9&amp;q=surface&amp;utf8=%E2%9C%93">9</a></li> <li class="disabled"><a href="#"><span class="gap">&hellip;</span></a></li> <li><a href="/v4/cpu/search?page=1120&amp;q=surface&amp;utf8=%E2%9C%93">1120</a></li> <li><a href="/v4/cpu/search?page=1121&amp;q=surface&amp;utf8=%E2%9C%93">1121</a></li> <li class="next next_page "><a rel="next" href="/v4/cpu/search?page=2&amp;q=surface&amp;utf8=%E2%9C%93">Next &#8594;</a></li></ul>
+
+
+</div>
+</div>
+</div>
+<footer>
+<div id='footerContainer'>
+<div class='container'>
+<div class='row'>
+<div class='footerNav col-xs-6 col-sm-3 col-md-2 col-md-push-3'>
+<h6>Products</h6>
+<ul>
+<li>
+<a href='http://www.geekbench.com/'>Geekbench 4</a>
+</li>
+<li>
+<a href='http://www.geekbench.com/v3/'>Geekbench 3</a>
+</li>
+<li>
+<a href='http://www.geekbench.com/v2/'>Geekbench 2</a>
+</li>
+<li>
+<a href='https://www.voodoopad.com/'>VoodooPad</a>
+</li>
+</ul>
+</div>
+<div class='footerNav col-xs-6 col-sm-3 col-md-2 col-md-push-3'>
+<h6>Support</h6>
+<ul>
+<li>
+<a href='http://support.primatelabs.com/kb'>Knowledge Base</a>
+</li>
+<li>
+<a href='http://store.primatelabs.com/store/lost_license/'>Lost License</a>
+</li>
+<li>
+<a href='http://www.primatelabs.com/contact/'>Contact</a>
+</li>
+<li>
+<a href='http://www.primatelabs.com/legal/privacy.html'>Privacy Policy</a>
+</li>
+<li>
+<a href='http://www.primatelabs.com/legal/terms-of-use.html'>Terms of Use</a>
+</li>
+</ul>
+</div>
+<div class='footerNav col-xs-6 col-sm-3 col-md-2 col-md-push-3'>
+<h6>News &amp; Social</h6>
+<ul>
+<li>
+<a href='http://www.primatelabs.com/blog/'>Blog</a>
+</li>
+<li>
+<a href='https://twitter.com/primatelabs'>Twitter</a>
+</li>
+<li>
+<a href='https://www.facebook.com/primatelabs'>Facebook</a>
+</li>
+<li>
+<a href='https://www.instagram.com/primatelabs/'>Instagram</a>
+</li>
+<li>
+<a href='https://www.youtube.com/channel/UCAr1oShRa70bzaEYwvyLWig/feed'>YouTube</a>
+</li>
+</ul>
+</div>
+<div class='footerNav col-xs-6 col-sm-3 col-md-2 col-md-push-3'>
+<h6>Company</h6>
+<ul>
+<li>
+<a href='http://www.primatelabs.com/contact/'>Corporate</a>
+</li>
+<li>
+<a href='http://www.primatelabs.com/jobs/'>Jobs</a>
+</li>
+<li>
+<a href='http://www.primatelabs.com/contact/'>Media</a>
+</li>
+</ul>
+</div>
+<div class='col-xs-8 col-xs-push-2 col-sm-4 col-sm-push-4 col-md-3 col-md-push-0 col-md-pull-8'>
+<div id='footerLogo'>
+<a href='http://primatelabs.com'>
+<img src="/assets/primate-labs-logo-fd7e09b735c0792cb111168c1844b9b006985da47a07695d4fec9d45443e9fbc.svg" alt="Primate labs logo" />
+</a>
+</div>
+<div id='footerAddress'>
+<p>1867 Yonge St. Suite 902<br>Toronto, Ontario, Canada<br>M4S 1Y5</p>
+</div>
+</div>
+</div>
+<div class='row row-centered'>
+<div class='col-xs-12 col-sm-6 col-md-5 col-centered' id='copyright'>
+<p>
+Copyright © 2004-2019 Primate Labs Inc.
+</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
