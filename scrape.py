@@ -8,7 +8,7 @@ import csv
 with open('dist/surface-latest-50.csv', mode='w') as test_write:
     test_writer = csv.writer(test_write, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
-    test_writer.writerow(['id', 'href', 'device', 'cpu', 'clockSpeed', 'numCores', 'platform', 'username', 'singleCoreScore', 'multiCoreScore'])
+    test_writer.writerow(['id', 'href', 'name', 'cpu', 'clockSpeed', 'numCores', 'platform', 'username', 'singleCoreScore', 'multiCoreScore'])
 
     # f = open("test.html", "r")
     # testFile = f.read()
