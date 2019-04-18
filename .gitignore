@@ -1,4 +1,2 @@
-dist/*
-!dist/.gitkeep
-*.Rout
-.RData
+server/dist/*
+!server/dist/.gitkeep
