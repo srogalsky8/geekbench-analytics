@@ -7,9 +7,9 @@ class Home extends React.Component {
       <div>
         <h1>This is the home page</h1>
         <ul>
-          <li><Link to="/device/">Device 1</Link></li>
-          <li>Device 2</li>
-          <li>Device 3</li>
+          <li><Link to="/device-1/">Device 1</Link></li>
+          <li><Link to="/device-2/">Device 2</Link></li>
+          <li><Link to="/device-3/">Device 3</Link></li>
         </ul>
       </div>
     );

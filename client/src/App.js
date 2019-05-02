@@ -10,7 +10,7 @@ class App extends React.Component {
         <div>
           {/* <Header /> */}
           <Route exact path="/" component={Home} />
-          <Route path="/device" component={Device} />
+          <Route path="/:deviceSlug" component={Device} />
         </div>
       </Router>
     );
