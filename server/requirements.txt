@@ -15,7 +15,7 @@ distro-info===0.18ubuntu0.18.04.1
 google-api-python-client==1.7.4
 google-auth==1.6.1
 google-auth-httplib2==0.0.3
-httplib2==0.12.0
+httplib2==0.18.0
 idna==2.6
 isort==4.3.9
 keyring==10.6.0
